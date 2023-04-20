@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/b3a3dad912.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+  <style>
+    .nav-item .nav-link.active {
+      color: #0462f0;
+    }
+
+    .nav-link {
+      color: rgb(0, 0, 0);
+
+    }
+
+    .nav-link:hover {
+      color: gray;
+    }
+
+    #grid {
+      margin: 5px;
+      width: 415px;
+      height: 415px;
+      object-fit: cover;
+
+
+    }
+
+    #camera:active {
+      background-color: gray;
+    }
+
+    #location:active {
+      background-color: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="https://www.instagram.com/">
+          <i class="fa-brands fa-instagram"></i>
+          <strong>Instagram</strong>
+        </a>
+        <div class="d-flex" style="gap:10px">
+          <button style="background-color: green; border-color:green;" type="button" class="btn btn-primary"
+            data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Create a new post
+          </button>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fas fa-cog"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-lg-end">
+              <li><a class="dropdown-item">Profile</a></li>
+              <li><a class="dropdown-item">Accesibility</a></li>
+              <li><a class="dropdown-item">Privacy and data</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a style="color: red;" class="dropdown-item">Log out</a></li>
+            </ul>
+          </div>
+
+        </div>
+    </nav>
+    <div class="d-flex justify-content-center" style="margin-top: 10px;">
+      <ul style="border: none; outline: none;" class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button style="border: none;" class="nav-link active" id="home-tab" data-bs-toggle="tab"
+            data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+            <span class="material-symbols-outlined">
+              grid_on
+            </span>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button style="border: none;" class="nav-link" id="profile-tab" data-bs-toggle="tab"
+            data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
+            aria-selected="false">
+            <i style="font-size: 22px; margin-top: 2px;" class="fa-solid fa-square"></i>
+          </button>
+        </li>
+    </div>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+        <div class="d-flex justify-content-center" style="width: 1280px;">
+          <img id="grid"
+            src="https://images.pexels.com/photos/1000366/pexels-photo-1000366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+          <img id="grid"
+            src="https://images.pexels.com/photos/4386404/pexels-photo-4386404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+          <img id="grid"
+            src="https://images.pexels.com/photos/3769167/pexels-photo-3769167.jpeg?auto=compress&cs=tinysrgb&w=600" />
+        </div>
+        <div class="d-flex justify-content-center" style="width: 1280px;">
+          <img id="grid"
+            src="https://images.pexels.com/photos/4819572/pexels-photo-4819572.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+          <img id="grid"
+            src="https://images.pexels.com/photos/4237148/pexels-photo-4237148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+          <img id="grid"
+            src="https://images.pexels.com/photos/5868074/pexels-photo-5868074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+        </div>
+        <div class="d-flex justify-content-center" style="width: 1280px;">
+          <img id="grid"
+            src="https://images.pexels.com/photos/10854279/pexels-photo-10854279.jpeg?auto=compress&cs=tinysrgb&w=600" />
+          <img id="grid"
+            src="https://images.pexels.com/photos/9304725/pexels-photo-9304725.jpeg?auto=compress&cs=tinysrgb&w=600" />
+          <img id="grid"
+            src="https://images.pexels.com/photos/8489551/pexels-photo-8489551.jpeg?auto=compress&cs=tinysrgb&w=600" />
+        </div>
+      </div>
+      <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+        <div class="d-flex justify-content-center">
+          <div style="border: solid 1px rgb(212, 206, 206); margin-top: 50px; width: 600px;">
+            <div class="d-flex justify-content-between">
+              <div style="padding: 5px;">
+                <big><strong>Painting</strong></big>
+              </div>
+              <div class="" style="font-size: 12px; margin-top: 10px;margin-right: 6px; color: rgb(86, 83, 83); ">
+                08/26
+              </div>
+            </div>
+            <div>
+              <img style="width: 100%;"
+                src="https://images.pexels.com/photos/1000366/pexels-photo-1000366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+            </div>
+            <div>
+              <p style="font-size: smaller;padding: 5.1px;"><strong>
+                  287 likes</strong>
+                <br>This is an example of a very good photo you can post on Instagram</br>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div style="border: solid 1px rgb(212, 206, 206); margin-top: 50px; width: 600px;">
+            <div class="d-flex justify-content-between">
+              <div style="padding: 5px;">
+                <big><strong>Money</strong></big>
+              </div>
+              <div class="" style="font-size: 12px; margin-top: 10px;margin-right: 6px; color: rgb(86, 83, 83); ">
+                02/30
+              </div>
+            </div>
+            <div style=>
+              <img style="width: 100%;"
+                src="https://images.pexels.com/photos/4386404/pexels-photo-4386404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+            </div>
+            <div>
+              <p style="font-size: smaller;padding: 5.1px;"><strong>
+                  562 likes</strong>
+                <br>This is an example of a very good photo you can post on Instagram</br>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div style="border: solid 1px rgb(212, 206, 206); margin-top: 50px; width: 600px;">
+            <div class="d-flex justify-content-between">
+              <div style="padding: 5px;">
+                <big><strong>Dominoes</strong></big>
+              </div>
+              <div class="" style="font-size: 12px; margin-top: 10px;margin-right: 6px; color: rgb(86, 83, 83); ">
+                20/06
+              </div>
+            </div>
+            <div>
+              <img style="width: 100%;"
+                src="https://images.pexels.com/photos/3769167/pexels-photo-3769167.jpeg?auto=compress&cs=tinysrgb&w=600" />
+            </div>
+            <div>
+              <p style="font-size: smaller;padding: 5.1px;"><strong>
+                  876 likes</strong>
+                <br>This is an example of a very good photo you can post on Instagram</br>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div style="border: solid 1px rgb(212, 206, 206); margin-top: 50px; width: 600px;">
+            <div class="d-flex justify-content-between">
+              <div style="padding: 5px;">
+                <big><strong>Mollusks</strong></big>
+              </div>
+              <div class="" style="font-size: 12px; margin-top: 10px;margin-right: 6px; color: rgb(86, 83, 83); ">
+                24/03
+              </div>
+            </div>
+            <div>
+              <img style="width: 100%;"
+                src="https://images.pexels.com/photos/4819572/pexels-photo-4819572.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+            </div>
+            <div>
+              <p style="font-size: smaller;padding: 5.1px;"><strong>
+                  431 likes</strong>
+                <br>This is an example of a very good photo you can post on Instagram</br>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div style="border: solid 1px rgb(212, 206, 206); margin-top: 50px; width: 600px;">
+            <div class="d-flex justify-content-between">
+              <div style="padding: 5px;">
+                <big><strong>Cubes</strong></big>
+              </div>
+              <div class="" style="font-size: 12px; margin-top: 10px;margin-right: 6px; color: rgb(86, 83, 83); ">
+                12/12
+              </div>
+            </div>
+            <div>
+              <img style="width: 100%;"
+                src="https://images.pexels.com/photos/4237148/pexels-photo-4237148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+            </div>
+            <div>
+              <p style="font-size: smaller;padding: 5.1px;"><strong>
+                  648 likes</strong>
+                <br>This is an example of a very good photo you can post on Instagram</br>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div style="border: solid 1px rgb(212, 206, 206); margin-top: 50px; width: 600px;">
+            <div class="d-flex justify-content-between">
+              <div style="padding: 5px;">
+                <big><strong>Abstract</strong></big>
+              </div>
+              <div class="" style="font-size: 12px; margin-top: 10px;margin-right: 6px; color: rgb(86, 83, 83); ">
+                01/09
+              </div>
+            </div>
+            <div>
+              <img style="width: 100%;"
+                src="https://images.pexels.com/photos/5868074/pexels-photo-5868074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+            </div>
+            <div>
+              <p style="font-size: smaller;padding: 5.1px;"><strong>
+                  124 likes</strong>
+                <br>This is an example of a very good photo you can post on Instagram</br>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div style="border: solid 1px rgb(212, 206, 206); margin-top: 50px; width: 600px;">
+            <div class="d-flex justify-content-between">
+              <div style="padding: 5px;">
+                <big><strong>Blocks</strong></big>
+              </div>
+              <div class="" style="font-size: 12px; margin-top: 10px;margin-right: 6px; color: rgb(86, 83, 83); ">
+                10/05
+              </div>
+            </div>
+            <div>
+              <img style="width: 100%;"
+                src="https://images.pexels.com/photos/10854279/pexels-photo-10854279.jpeg?auto=compress&cs=tinysrgb&w=600" />
+            </div>
+            <div>
+              <p style="font-size: smaller;padding: 5.1px;"><strong>
+                  793 likes</strong>
+                <br>This is an example of a very good photo you can post on Instagram</br>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div style="border: solid 1px rgb(212, 206, 206); margin-top: 50px; width: 600px;">
+            <div class="d-flex justify-content-between">
+              <div style="padding: 5px;">
+                <big><strong>Balance</strong></big>
+              </div>
+              <div class="" style="font-size: 12px; margin-top: 10px;margin-right: 6px; color: rgb(86, 83, 83); ">
+                08/02
+              </div>
+            </div>
+            <div>
+              <img style="width: 100%;"
+                src="https://images.pexels.com/photos/9304725/pexels-photo-9304725.jpeg?auto=compress&cs=tinysrgb&w=600" />
+            </div>
+            <div>
+              <p style="font-size: smaller;padding: 5.1px;"><strong>
+                  349 likes</strong>
+                <br>This is an example of a very good photo you can post on Instagram</br>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div style="border: solid 1px rgb(212, 206, 206); margin-top: 50px; width: 600px;">
+            <div class="d-flex justify-content-between">
+              <div style="padding: 5px;">
+                <big><strong>Detective</strong></big>
+              </div>
+              <div class="" style="font-size: 12px; margin-top: 10px;margin-right: 6px; color: rgb(86, 83, 83); ">
+                15/01
+              </div>
+            </div>
+            <div>
+              <img style="width: 100%;"
+                src="https://images.pexels.com/photos/8489551/pexels-photo-8489551.jpeg?auto=compress&cs=tinysrgb&w=600" />
+            </div>
+            <div>
+              <p style="font-size: smaller;padding: 5.1px;"><strong>
+                  917 likes</strong>
+                <br>This is an example of a very good photo you can post on Instagram</br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <strong>Caption:</strong>
+            <div class="card" style="margin-top: 10px;  height: 80px; padding: 10px;">
+              <p style="color: gray;">Add the caption of your post here</p>
+            </div>
+
+            <div class="d-flex" style="gap: 10px; margin-top: 10px; margin-bottom: 10px;">
+
+              <div class="d-flex justify-content-center">
+                <button id="camera" class="align-self-center"
+                  style="height: 30px; width: 35px; border-style:solid;border: 1px solid lightgray;"><i
+                    class="fas fa-camera"></i></button>
+              </div>
+
+              <div class="d-flex justify-content-center">
+                <button id="location" class="align-self-center;"
+                  style="height: 30px; width: 35px;border-style:solid;border: 1px solid lightgray;"><i
+                    class="fas fa-map-marker"></i></button>
+              </div>
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary"
+              style="background-color: green; border-color: green;">Publish</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
